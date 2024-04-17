@@ -9,7 +9,7 @@ import {
 // import { StyleSheet, Text, View } from 'react-native';
 import { Dimensions } from "react-native";
 
-export default function LineChart_CV({ xValues, yValues, xlabel = "", ylabel = "" }) {
+export default function LineChart({ xValues, yValues, xlabel = "", ylabel = "" }) {
     const datasets = yValues.map((y) => ({ data: y })); // Map each line to its own data set
     const screenWidth = Dimensions.get("window").width; // From react-native
     const width = screenWidth * 0.9; // 90% of screen width
@@ -28,7 +28,7 @@ export default function LineChart_CV({ xValues, yValues, xlabel = "", ylabel = "
             width={width} // from react-native
             height={height} // 16-9 aspect ratio
             yAxisLabel={ylabel}
-            fromNumber={3}
+            fromNumber={5}
             yAxisInterval={1} // optional, defaults to 1
             // formatXLabel={(xValues) => xValues.push("s")}
             chartConfig={{
