@@ -1,7 +1,7 @@
 // import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
 // import LineChart from './CustomLineChart';
-import CardView from './Cardveiw';
+import CardView from './CardView.js';
 import styles from './styles.js';
 
 const yAxis = [[1, 2, 3, 4, 5], [5, 4, 3, 2, 1]]; // Two lines

@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     cardTitle: {
         fontSize: 30,
-        color: 'blue',
+        color: '#339cf2',
     },
     fullWidth: {
         width: "98%",
