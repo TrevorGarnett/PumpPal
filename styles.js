@@ -5,6 +5,14 @@ export default StyleSheet.create({
         fontSize: 30,
         color: '#339cf2',
     },
+    bigHeader: {
+        fontSize: 40,
+        color: '#000000',
+        paddingLeft: 20,
+        paddingTop: 40,
+        fontWeight: 'bold',
+        fontFamily: 'Arial',
+    },
     fullWidth: {
         width: "98%",
         paddingLeft: "1%"
@@ -15,6 +23,9 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: "98%"
+    },
+    background: {
+        flex: 1,
     },
     // Add more styles as needed
 });
