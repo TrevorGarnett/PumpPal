@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function FavoriteButton() {
 
-    [favorited, setFavorited] = useState(false);
+    const [favorited, setFavorited] = useState(false);
     return (
         <Pressable onPress={() => setFavorited(!favorited)}>
             <Text>{favorited ? "❤️" : "♡"}</Text>

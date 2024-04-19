@@ -13,9 +13,10 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         fontFamily: 'Arial',
     },
-    fullWidth: {
+    cardObject: {
         width: "98%",
-        paddingLeft: "1%"
+        paddingLeft: "1%",
+        borderRadius: 20,
     },
     container: {
         flex: 1,
