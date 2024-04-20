@@ -1,5 +1,4 @@
-import { Pressable } from "react-native";
-import { Text } from "react-native";
+import { Pressable, Text } from "react-native";
 import { useState } from "react";
 
 export default function FavoriteButton() {
