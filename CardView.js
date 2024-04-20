@@ -1,9 +1,11 @@
 import { Text, View } from 'react-native';
-import { Card } from '@rneui/themed';
+import { Pressable, Text } from "react-native";
+import { useState } from "react";
 import styles from './styles.js';
 import FavoriteButton from './FavoriteButton.js';
 
 export default function CardView({ title = "" }) {
+    const [favorited, setFavorited] = useState(false);
     return (
         <View style={styles.cardObject}>
             <View style={{ alignContent: 'flex-start', flex: 1 }}>
@@ -11,7 +13,9 @@ export default function CardView({ title = "" }) {
                 <Text style={{ fontSize: 25 }}>225lbs</Text>
             </View>
             <View style={{ alignContent: 'flex-end' }}>
-                <FavoriteButton />
+                <Pressable onPress={() => setFavorited(!favorited)}>
+                    <FavoriteButton />
+                </Pressable>
             </View>
         </View>
     );

@@ -1,12 +1,11 @@
-import { Pressable, Text } from "react-native";
-import { useState } from "react";
+import Icon from 'react-native-vector-icons/Ionicons';
 
-export default function FavoriteButton() {
+const emptyStar = <Icon name="star-outline" size={30} color="black" />;
+const filledStar = <Icon name="star" size={30} color="gold" />;
 
-    const [favorited, setFavorited] = useState(false);
-    return (
-        <Pressable onPress={() => setFavorited(!favorited)}>
-            <Text>{favorited ? "❤️" : "♡"}</Text>
-        </Pressable >
-    );
+export default function FavoriteButton(favorited = false) {
+    if (favorited) {
+        return filledStar;
+    }
+    return emptyStar
 }
