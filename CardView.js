@@ -5,10 +5,14 @@ import FavoriteButton from './FavoriteButton.js';
 
 export default function CardView({ title = "" }) {
     return (
-        <Card style={styles.cardObject}>
-            <Card.Title style={styles.cardTitle}>{title}</Card.Title>
-            <Text style={{ fontSize: 25 }}>225lbs</Text>
-            <FavoriteButton />
-        </Card >
+        <View style={styles.cardObject}>
+            <View style={{ alignContent: 'flex-start', flex: 1 }}>
+                <Text style={styles.cardTitle}>{title}</Text>
+                <Text style={{ fontSize: 25 }}>225lbs</Text>
+            </View>
+            <View style={{ alignContent: 'flex-end' }}>
+                <FavoriteButton />
+            </View>
+        </View>
     );
 }

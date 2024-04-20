@@ -4,19 +4,23 @@ export default StyleSheet.create({
     cardTitle: {
         fontSize: 30,
         color: '#339cf2',
+        alignContent: 'flex-start',
     },
     bigHeader: {
         fontSize: 40,
         color: '#000000',
-        paddingLeft: 20,
         paddingTop: 40,
+        paddingBottom: 20,
         fontWeight: 'bold',
         fontFamily: 'Arial',
     },
     cardObject: {
-        width: "98%",
-        paddingLeft: "1%",
+        flexDirection: 'row',
+        paddingVertical: 10,
+        paddingHorizontal: 10,
         borderRadius: 20,
+        backgroundColor: '#ffffff',
+        width: "100%",
     },
     container: {
         flex: 1,
