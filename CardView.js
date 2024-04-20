@@ -1,5 +1,4 @@
-import { Text, View } from 'react-native';
-import { Pressable, Text } from "react-native";
+import { View, Pressable, Text } from "react-native";
 import { useState } from "react";
 import styles from './styles.js';
 import FavoriteButton from './FavoriteButton.js';
@@ -14,7 +13,7 @@ export default function CardView({ title = "" }) {
             </View>
             <View style={{ alignContent: 'flex-end' }}>
                 <Pressable onPress={() => setFavorited(!favorited)}>
-                    <FavoriteButton />
+                    <FavoriteButton favorited={favorited} />
                 </Pressable>
             </View>
         </View>
