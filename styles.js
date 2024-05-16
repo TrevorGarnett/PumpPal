@@ -27,8 +27,5 @@ export default StyleSheet.create({
         justifyContent: 'center',
         width: "98%"
     },
-    background: {
-        flex: 1,
-    },
     // Add more styles as needed
 });

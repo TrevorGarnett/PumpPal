@@ -1,10 +1,11 @@
-import { View, Text, SafeAreaView, FlatList, Pressable } from 'react-native';
+import { View, Text, SafeAreaView, FlatList, Pressable, Modal, TextInput } from 'react-native';
 import React, { useState } from 'react';
 import CardView from './CardView.js';
 import styles from './styles.js';
 import { LinearGradient } from 'expo-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import DropDown from './DropDown.js';
+import 'react-native-gesture-handler';
+import AddExercise from './AddExercise.js';
 
 let DATA = [
   { id: 1, title: "Bench Press", type: "WeightLifting" },
@@ -13,16 +14,14 @@ let DATA = [
   { id: 1000, title: "Running", type: "Cardio" }];
 
 export default function App() {
-  const [modalVisible, setModalVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(true);
   const toggleModal = () => {
     setModalVisible(!modalVisible);
-    console.log(modalVisible);
   }
   // DATA = Get data
   return (
-    <LinearGradient colors={['#abe0ff', '#CDE8F7', '#E9EEF1', '#f0f0f0']} style={styles.background}>
+    <LinearGradient colors={['#abe0ff', '#CDE8F7', '#E9EEF1', '#f0f0f0']} style={{ flex: 1 }}>
       <SafeAreaView>
-        <DropDown visible={modalVisible} setVisible={setModalVisible} />
         <FlatList
           style={{ height: "100%" }}
           // ListHeaderComponent={0 === 0 ? <Text style={styles.bigHeader}>Stats</Text> : <Header> hi</Header>} //TODO: Add header for when we scroll down. E.g., when you scroll down in the summary tab in apple health
@@ -41,6 +40,7 @@ export default function App() {
           contentContainerStyle={{ paddingHorizontal: 15 }}
           ListEmptyComponent={<Text> No Data at the Moment</Text>}
         />
+        <AddExercise visible={modalVisible} setVisible={setModalVisible} />
       </SafeAreaView >
     </LinearGradient>
 
