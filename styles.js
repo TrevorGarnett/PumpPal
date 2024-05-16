@@ -9,8 +9,6 @@ export default StyleSheet.create({
     bigHeader: {
         fontSize: 40,
         color: '#000000',
-        paddingTop: 40,
-        paddingBottom: 20,
         fontWeight: 'bold',
         fontFamily: 'Arial',
     },
@@ -18,7 +16,7 @@ export default StyleSheet.create({
         flexDirection: 'row',
         paddingVertical: 10,
         paddingHorizontal: 10,
-        borderRadius: 20,
+        borderRadius: 12,
         backgroundColor: '#ffffff',
         width: "100%",
     },
