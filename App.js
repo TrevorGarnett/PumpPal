@@ -8,7 +8,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
 import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function App() {//hi
+export default function App() {
   const [user, onChangeLoggedInUser] = React.useState(null);
   const [email, onChangeEmail] = React.useState("");
   const [password, onChangePassword] = React.useState("");
