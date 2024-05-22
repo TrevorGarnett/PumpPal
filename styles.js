@@ -27,5 +27,14 @@ export default StyleSheet.create({
         justifyContent: 'center',
         width: "98%"
     },
+    input: {
+        // height: 40,
+        width: 200,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+        alignSelf: 'center',
+        textAlign: 'center',
+    }
     // Add more styles as needed
 });
