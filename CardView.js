@@ -1,9 +1,10 @@
+import React, { useState } from "react";
 import { View, Pressable, Text } from "react-native";
-import { useState } from "react";
 import styles from './styles.js';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MatIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import PropTypes from 'prop-types';
+
 const emptyStar = <Icon name="star-outline" size={30} color="black" />;
 const filledStar = <Icon name="star" size={30} color="gold" />;
 const dumbbell = <MatIcon style={{ padding: 10 }} name="dumbbell" size={50} color="black" />;
