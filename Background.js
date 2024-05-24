@@ -1,6 +1,7 @@
 import React from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SafeAreaView, View } from 'react-native';
+import styles from './styles.js';
 
 export default function Background({ children }) {
     return (

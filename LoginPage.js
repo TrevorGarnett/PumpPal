@@ -2,15 +2,19 @@ import React, { useState } from 'react';
 import { Button, TextInput, Text, View } from 'react-native';
 import styles from './styles.js';
 import Background from './Background.js';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, initializeAuth, getReactNativePersistence } from "firebase/auth";
+import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
+import app from "./firebaseConfig";
+
+const auth = initializeAuth(app, {
+  persistence: getReactNativePersistence(ReactNativeAsyncStorage)
+});
 
 export default function LoginPage({ onLogin }) {
   const [email, onChangeEmail] = useState("");
   const [password, onChangePassword] = useState("");
   const [emailFocused, setEmailFocused] = useState(false);
   const [passwordFocused, setPasswordFocused] = useState(false);
-
-  const auth = getAuth();
 
   const createUser = () => {
     createUserWithEmailAndPassword(auth, email, password)

@@ -38,9 +38,10 @@ export default StyleSheet.create({
     },
     saveButton: {
         backgroundColor: '#339cf2',
-        paddingVertical: 10,
-        paddingHorizontal: 35,
-        borderRadius: 5,
+        width: "90%",
+        padding: 10,
+        borderRadius: 10,
+        alignSelf: 'center',
         elevation: 3, // for Android shadow
         shadowColor: '#000', // for iOS shadow
         shadowOffset: { width: 0, height: 2 }, // for iOS shadow
@@ -49,14 +50,9 @@ export default StyleSheet.create({
     },
     saveButtonText: {
         color: '#fff',
+        alignSelf: 'center',
         fontSize: 16,
         fontWeight: 'bold',
     },
-    bottomButtonContainer: {
-        position: 'absolute',
-        bottom: 20,
-        width: '100%',
-        alignItems: 'center',
-    }
     // Add more styles as needed
 });

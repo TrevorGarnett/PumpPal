@@ -6,7 +6,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import 'react-native-gesture-handler';
 import AddExercise from './AddExercise.js';
 import Background from './Background.js';
-import SaveButton from './SaveButton';
 
 let DATA = [
     { id: 1, title: "Bench Press", type: "WeightLifting" },
@@ -42,9 +41,6 @@ export default function StatPage() {
                 ListEmptyComponent={<Text> No Data at the Moment</Text>}
             />
             <AddExercise visible={modalVisible} setVisible={setModalVisible} />
-            <View style={styles.bottomButtonContainer}>
-                <SaveButton />
-            </View>
         </Background >
     );
 }
