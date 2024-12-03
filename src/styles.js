@@ -1,4 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const {width, height} = Dimensions.get('window');
 
 export default StyleSheet.create({
     cardTitle: {
@@ -29,12 +31,19 @@ export default StyleSheet.create({
     },
     input: {
         // height: 40,
-        width: 200,
+        width: width * 0.80,
         margin: 12,
-        borderWidth: 1,
-        padding: 10,
+        borderBottomWidth: 1,
+        borderColor: '#A0A0A0',
+        paddingLeft: 10,
+        paddingBottom: 10,
         alignSelf: 'center',
-        textAlign: 'center',
-    }
+        textAlign: 'left',
+    },
+    rowAlign : {
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        width: "100%",
+    },
     // Add more styles as needed
 });
